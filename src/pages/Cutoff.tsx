@@ -1,41 +1,65 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Lang } from "../data";
 
-const Cutoff: React.FC = () => {
+type CutoffProps = {
+  lang: Lang;
+};
+
+const Cutoff: React.FC<CutoffProps> = ({ lang }) => {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in">
       <Helmet>
-        <title>FYJC Cutoff 2026 | Science, Commerce, Arts</title>
+        <title>{lang === "mr" ? "FYJC कटऑफ 2026" : "FYJC Cutoff 2026"}</title>
         <meta
           name="description"
-          content="FYJC cutoff information for Maharashtra 11th admission. Science cutoff, commerce cutoff, arts colleges, and quota seat trends."
+          content={
+            lang === "mr"
+              ? "FYJC कटऑफ 2026 - science, commerce आणि arts कटऑफ ट्रेंडसाठी मार्गदर्शन."
+              : "FYJC cutoff 2026 guidance for science, commerce, and arts trends."}
         />
       </Helmet>
-      <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h1 className="text-3xl font-bold text-slate-900">FYJC Cutoff 2026</h1>
-        <p className="mt-4 text-slate-700 leading-7">
-          Here are the latest cutoff themes for FYJC admission in Maharashtra. Use this guide to compare science cutoff, commerce cutoff, and arts college admission thresholds across Mumbai and Pune. 
+      <section className="rounded-[2rem] border border-slate-200 bg-white/95 p-6 shadow-glow">
+        <h1 className="text-3xl font-bold text-slate-900">
+          {lang === "mr" ? "FYJC कटऑफ 2026" : "FYJC Cutoff 2026"}
+        </h1>
+        <p className="mt-4 text-slate-700 leading-8">
+          {lang === "mr"
+            ? "महाराष्ट्रातील science, commerce आणि arts प्रवेश कटऑफची माहिती आणि कटऑफ तुलना येथे मिळवा."
+            : "Discover science, commerce, and arts cutoff guidance for Maharashtra FYJC admission."}
         </p>
       </section>
 
-      <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-semibold text-slate-900">Science Cutoff</h2>
+      <section className="rounded-[2rem] border border-slate-200 bg-white/95 p-6 shadow-glow animate-card">
+        <h2 className="text-2xl font-semibold text-slate-900">
+          {lang === "mr" ? "Science कटऑफ" : "Science Cutoff"}
+        </h2>
         <p className="mt-4 leading-7 text-slate-700">
-          Science cutoff in top FYJC colleges is competitive. Look for yearly trends and category-specific marks to estimate your chances for PCMC, PCB, and Marathi medium courses.
+          {lang === "mr"
+            ? "Top science कॉलेजसाठी कटऑफ स्पर्धात्मक असतो. PCMC, PCB आणि मराठी माध्यमासाठी अनुमानित मार्क्स पाहा."
+            : "Top science colleges are competitive. Review PCMC, PCB, and Marathi-medium cutoff expectations."}
         </p>
       </section>
 
-      <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-semibold text-slate-900">Commerce Cutoff</h2>
+      <section className="rounded-[2rem] border border-slate-200 bg-white/95 p-6 shadow-glow animate-card">
+        <h2 className="text-2xl font-semibold text-slate-900">
+          {lang === "mr" ? "Commerce कटऑफ" : "Commerce Cutoff"}
+        </h2>
         <p className="mt-4 leading-7 text-slate-700">
-          Commerce cutoff varies across city and district colleges. Pune FYJC commerce colleges often offer strong options for BBI, BMS, and Marathi commerce streams.
+          {lang === "mr"
+            ? "कॉमर्स कटऑफ शहर आणि जिल्हानुसार बदलतो. पुण्यातील BBI, BMS आणि मराठी कॉमर्सचे पर्याय तपासा."
+            : "Commerce cutoff varies by city and district. Check Pune options for BBI, BMS, and Marathi commerce."}
         </p>
       </section>
 
-      <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-semibold text-slate-900">Arts Colleges</h2>
+      <section className="rounded-[2rem] border border-slate-200 bg-white/95 p-6 shadow-glow animate-card">
+        <h2 className="text-2xl font-semibold text-slate-900">
+          {lang === "mr" ? "Arts कॉलेज" : "Arts Colleges"}
+        </h2>
         <p className="mt-4 leading-7 text-slate-700">
-          Arts colleges are a great choice for students seeking flexibility and lower cutoffs. Explore Marathi, English, and regional arts college options in Mumbai and Pune.
+          {lang === "mr"
+            ? "आर्ट्स कॉलेज हा flexibility आणि कमी कटऑफसाठी चांगला पर्याय आहे. मुंबई व पुण्यातील पर्याय शोधा."
+            : "Arts colleges provide flexibility and lower cutoffs. Explore options in Mumbai and Pune."}
         </p>
       </section>
     </div>

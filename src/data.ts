@@ -5,6 +5,12 @@ export type FAQ = {
   a: string;
 };
 
+export type CutoffFile = {
+  label: string;
+  filename: string;
+  description: string;
+};
+
 export type SectionData = {
   title: string;
   subtitle: string;
@@ -12,6 +18,7 @@ export type SectionData = {
   process: string[];
   docs: string[];
   faq: FAQ[];
+  cutoffFiles: CutoffFile[];
   updates: string[];
   importantDates: string[];
   instructions: string[];
@@ -102,6 +109,18 @@ export const sections: Record<Lang, SectionData> = {
       "Hamipatra आवश्यक असल्यास वापरू शकता",
       "Document Verification साठी कॉलेजमध्ये उपस्थित राहणे आवश्यक आहे",
     ],
+    cutoffFiles: [
+      {
+        label: "Round 0 कटऑफ PDF",
+        filename: "round0-cutoff.pdf",
+        description: "Round 0 कटऑफ फाइल डाउनलोड करा आणि प्रवेश संधी तपासा.",
+      },
+      {
+        label: "महाराष्ट्र FYJC कटऑफ सूची",
+        filename: "fyjc-cutoff-list.pdf",
+        description: "FYJC कटऑफ संदर्भासाठी PDF सूची.",
+      },
+    ],
     helpline: {
       website: "https://mahafyjcadmissions.in",
       email: "support@mahafyjcadmissions.in",
@@ -170,6 +189,18 @@ export const sections: Record<Lang, SectionData> = {
       "Students can choose minimum 1 and maximum 10 colleges",
       "Hamipatra can be uploaded if documents are unavailable",
       "Document verification is compulsory",
+    ],
+    cutoffFiles: [
+      {
+        label: "Round 0 Cutoff PDF",
+        filename: "round0-cutoff.pdf",
+        description: "Download the Round 0 cutoff file to review admission chances.",
+      },
+      {
+        label: "Maharashtra FYJC Cutoff List",
+        filename: "fyjc-cutoff-list.pdf",
+        description: "PDF cutoff reference for FYJC admission in Maharashtra.",
+      },
     ],
     helpline: {
       website: "https://mahafyjcadmissions.in",
