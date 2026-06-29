@@ -41,7 +41,7 @@ const App: React.FC = () => {
   }, [lang]);
 
   const currentSection = sections[lang];
-  const title = `${currentSection.title} | Maharashtra FYJC Admission 2026`;
+  const title = `${currentSection.title} | OMKAR BHETE CREATED Maharashtra FYJC Admission 2026`;
   const description = "FYJC Admission 2026 Maharashtra complete guidance website with Marathi and English options. Check merit list, documents, cutoffs, college list, and FAQ.";
 
   const nav = useMemo(
