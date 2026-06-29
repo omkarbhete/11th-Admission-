@@ -30,7 +30,7 @@ const languageTabs: Record<Lang, string> = {
 
 const alertText: Record<Lang, string> = {
   mr: "🚨 नवीन नोंदणी 22 मे 2026 पर्यंत खुली आहे. त्वरित फॉर्म भरा आणि महत्त्वाच्या तारखा वाचा.",
-  en: "🚨 omkar bhete AWS student builder group leader.",
+  en: "🚨 omkar bhetes.",
 };
 
 const App: React.FC = () => {
